@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	{{ title }}
+	|
+	{{ parent() }}
+{% endblock %}
+{% block body %}
+	{% if errorBool is defined %}
+		<h1>{{ error }}</h1>
+	{% else %}
+		<h1>Factorial Result:
+			{{ result }}</h1>
+	{% endif %}
+{% endblock %}
