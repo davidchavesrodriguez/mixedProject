@@ -1,7 +1,7 @@
 <?php
 
-
 namespace App\Controller;
+
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,7 +17,8 @@ class TestRequestController extends AbstractController
         $ip = $request->getClientIp();
 
         return $this->render("mixedProject/ip.html.twig", [
-            "ip" => $ip
+            "ip" => $ip,
+            "title" => "IP"
         ]);
     }
 }
